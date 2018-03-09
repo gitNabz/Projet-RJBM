@@ -6,9 +6,9 @@ const WIDTH = c.width;
 
 var bg = new Background();
 
-var j1 = new Rectangle("white", 20, (HEIGHT - 60) / 2, 20, 60);
+var j1 = new Rectangle("green", 20, (HEIGHT - 60) / 2, 20, 60);
 var j2 = new Rectangle("blue", WIDTH - 20 * 2, (HEIGHT - 60) / 2, 20, 60);
-var ball = new Ball("red", WIDTH / 2, HEIGHT / 2, 20, 20);
+var ball = new Ball("yellow", WIDTH / 2, HEIGHT / 2, 20, 20);
 
 function refresh(delta)
 {
