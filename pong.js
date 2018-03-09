@@ -23,11 +23,17 @@ document.body.addEventListener('keydown', function(e)
 {
     if (e.keyCode == 38)// up
     {
-
+            if (this.x > 0)
+                this.x--;
+            if (this.y > 0)
+                this.y--;
     }
     else if (e.keyCode == 40)// down
     {
-
+            if (this.x > 0)
+                this.x--;
+            if (this.y > 0)
+                this.y--;
     }
 });
 /*
