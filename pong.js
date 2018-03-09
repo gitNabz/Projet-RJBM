@@ -34,7 +34,7 @@ document.body.addEventListener('keydown', function (e)
     }
     if (e.keyCode == 65) // up
     {
-        j1.moveDown();
+        j1.moveUp();
     }
     else if (e.keyCode == 81) // down
     {
