@@ -1,10 +1,4 @@
 "use strict";
-
-var c = document.getElementById("game");
-var ctx = c.getContext("2d");
-ctx.rect(20, 20, 700, 500);
-ctx.fillStyle = "#111111";
-
 var c = document.getElementById("game");
 var ctx = c.getContext("2d");
 const HEIGHT = c.height;
@@ -16,7 +10,8 @@ var j1 = new Rectangle("white", 20, (HEIGHT - 60) / 2, 20, 60);
 var j2 = new Rectangle("blue", WIDTH - 20 * 2, (HEIGHT - 60) / 2, 20, 60);
 var ball = new Ball("red", WIDTH / 2, HEIGHT / 2, 20, 20);
 
-function refresh(delta) {
+function refresh(delta)
+{
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
     bg.draw();
     ball.move(delta);

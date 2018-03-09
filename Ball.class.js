@@ -8,7 +8,7 @@ class Ball
 		this.x = x;
 		this.y = y;
 		this.radius = radius;
-		this.direction = Math.PI * 1.5;
+		this.direction = Math.PI;
 		document.body.onclick = () =>
 		{
 			this.direction += Math.PI / 32;
@@ -44,6 +44,7 @@ class Ball
 		this.x += x;
 		this.y += y;
 
+		console.log(j1.collision("droite"));
 		if (this.x + this.radius > WIDTH)
 		{
 			//depasse le cadran a droite
@@ -59,9 +60,13 @@ class Ball
 		{
 			this.direction += Math.PI / 2;
 		}
-		else if (j1 ? j2)
+		else if (j1.collision("droite"))
 		{
-			
+			this.direction = 0;
+		}
+		else if (j2.collision("gauche"))
+		{
+			this.direction = Math.PI;
 		}
 		//this.direction += Math.PI / 16 * diff / 100;
 		this.delta = delta;
