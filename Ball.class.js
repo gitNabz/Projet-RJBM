@@ -1,8 +1,8 @@
 class Ball
 {
-	constructor(color, x, y, radius)
+	constructor(color, x, y, radius, speed)
 	{
-		this.speed = 50;
+		this.speed = speed;
 		this.delta = 0;
 		this.color = color;
 		this.x = x;
@@ -43,15 +43,9 @@ class Ball
 		var y = r * Math.sin(this.direction);
 		this.x += x;
 		this.y += y;
-		if (this.x + this.radius > WIDTH)
-			this.direction = Math.random() * Math.PI * 2;
-		else if (this.x - this.radius < 0)
-			this.direction = Math.random() * Math.PI * 2;
-		else if (this.y + this.radius > HEIGHT)
-			this.direction = Math.random() * Math.PI * 2;
-		else if (this.y - this.radius < 0)
-			this.direction = Math.random() * Math.PI * 2;
 		//this.direction += Math.PI / 16 * diff / 100;
+
+
 		this.delta = delta;
 	}
 }
