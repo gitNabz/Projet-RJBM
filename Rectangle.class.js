@@ -49,10 +49,12 @@ class Rectangle
 	}
     moveUp()
     {
-        this.y -= 10;
+        if (this.y > 25)
+            this.y -= 10;
     }
     moveDown()
     {
-        this.y += 10;
+        if (this.y < 715)
+            this.y += 10;
     }
 }

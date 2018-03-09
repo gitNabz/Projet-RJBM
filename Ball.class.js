@@ -8,7 +8,7 @@ class Ball
 		this.x = x;
 		this.y = y;
 		this.radius = radius;
-		this.direction = Math.PI;
+		this.direction = Math.PI * 1.25;
 		document.body.onclick = () =>
 		{
 			this.direction += Math.PI / 32;
@@ -54,7 +54,7 @@ class Ball
 		}
 		else if (this.y - this.radius / 2 < 25)
 		{
-			this.direction += Math.PI / 2;
+			this.direction = (Math.PI * 2) - this.direction % (Math.PI * 2);
 		}
 		else if (this.y + this.radius / 2 > HEIGHT - 25)
 		{
