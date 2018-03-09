@@ -27,14 +27,23 @@ function refresh(delta) {
 }
 requestAnimationFrame(refresh);
 
-document.body.addEventListener('keydown', function (e) {
+document.body.addEventListener('keydown', function (e)
+{
     if (e.keyCode == 38) // up
     {
-			this.y += 5;
-    } else if (e.keyCode == 40) // down
+        j2.moveUp();
+    }
+    else if (e.keyCode == 40) // down
     {
-			this.y -= 5;
-
+        j2.moveDown();
+    }
+    if (e.keyCode == 65) // up
+    {
+        j1.moveDown();
+    }
+    else if (e.keyCode == 81) // down
+    {
+        j1.moveDown();
     }
 });
 /*
