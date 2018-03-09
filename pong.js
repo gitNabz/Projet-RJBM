@@ -8,7 +8,7 @@ var bg = new Background();
 
 var j1 = new Rectangle("white", 20, (HEIGHT - 60) / 2, 20, 60);
 var j2 = new Rectangle("blue", WIDTH - 20 * 2, (HEIGHT - 60) / 2, 20, 60);
-var ball = new Ball("red", 50, 50, 20, 20);
+var ball = new Ball("red", WIDTH / 2, HEIGHT / 2, 20, 20);
 
 function refresh(delta)
 {

@@ -8,7 +8,7 @@ class Ball
 		this.x = x;
 		this.y = y;
 		this.radius = radius;
-		this.direction = 0;
+		this.direction = Math.PI * 1.5;
 		document.body.onclick = () =>
 		{
 			this.direction += Math.PI / 32;
@@ -43,9 +43,27 @@ class Ball
 		var y = r * Math.sin(this.direction);
 		this.x += x;
 		this.y += y;
+
+		if (this.x + this.radius > WIDTH)
+		{
+			//depasse le cadran a droite
+			// +1 point pour J1
+			this.x = (WIDTH - this.radius) / 2;
+			this.y = (HEIGHT - this.radius) / 2;
+		}
+		else if (this.y - this.radius / 2 < 25)
+		{
+			this.direction += Math.PI / 2;
+		}
+		else if (this.y + this.radius / 2 > HEIGHT - 25)
+		{
+			this.direction += Math.PI / 2;
+		}
+		else if (j1 ? j2)
+		{
+			
+		}
 		//this.direction += Math.PI / 16 * diff / 100;
-
-
 		this.delta = delta;
 	}
 }
