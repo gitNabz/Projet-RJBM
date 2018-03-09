@@ -7,12 +7,15 @@ const WIDTH = c.width;
 var bg = new Background();
 
 var j1 = new Rectangle("white", 20, (HEIGHT - 60) / 2, 20, 60);
-var j2 = new Rectangle("red", WIDTH - 20 * 2, (HEIGHT - 60) / 2, 20, 60);
+var j2 = new Rectangle("blue", WIDTH - 20 * 2, (HEIGHT - 60) / 2, 20, 60);
+var ball = new Ball("red", 50, 50, 20, 20);
 
 function refresh(delta)
 {
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
     bg.draw();
+    ball.move(delta);
+    ball.draw();
     j1.draw();
     j2.draw();
     requestAnimationFrame(refresh);
@@ -23,17 +26,11 @@ document.body.addEventListener('keydown', function(e)
 {
     if (e.keyCode == 38)// up
     {
-            if (this.x > 0)
-                this.x--;
-            if (this.y > 0)
-                this.y--;
+
     }
     else if (e.keyCode == 40)// down
     {
-            if (this.x > 0)
-                this.x--;
-            if (this.y > 0)
-                this.y--;
+
     }
 });
 /*
