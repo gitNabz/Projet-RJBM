@@ -69,6 +69,6 @@ class Ball
 			this.direction = Math.PI;
 		}
 		//this.direction += Math.PI / 16 * diff / 100;
-		this.delta = delta;
+		this.delta = delta;	
 	}
 }
