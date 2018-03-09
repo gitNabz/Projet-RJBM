@@ -14,4 +14,12 @@ class Rectangle
 		ctx.fillStyle = this.color;
 		ctx.fillRect(this.x, this.y, this.width, this.height);
 	}
+    moveUp()
+    {
+        this.y -= 10;
+    }
+    moveDown()
+    {
+        this.y += 10;
+    }
 }
